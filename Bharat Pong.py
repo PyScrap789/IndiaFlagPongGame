@@ -57,13 +57,15 @@ screenHeight = 720
 
 screen = pygame.display.set_mode((screenWidth, screenHeight))
 pygame.display.set_caption("Bharat Pong")
+icon = pygame.image.load('chakra.png')
+pygame.display.set_icon(icon)
 clock = pygame.time.Clock()
 
 chakra = pygame.image.load('chakra.png').convert_alpha()
-scaledChakra = pygame.transform.scale(chakra, (120, 120))
-chakraRect = pygame.Rect(screenWidth / 2 - 60, screenHeight / 2 - 60, 120, 120)
-chakraSpeedX = 7 * random.choice([-1, 1])
-chakraSpeedY = 7 * random.choice([-1, 1])
+scaledChakra = pygame.transform.scale(chakra, (40, 40))
+chakraRect = pygame.Rect(screenWidth / 2 - 20, screenHeight / 2 - 20, 40, 40)
+chakraSpeedX = 8 * random.choice([-1, 1])
+chakraSpeedY = 8 * random.choice([-1, 1])
 
 flag = pygame.image.load('india.png').convert_alpha()
 scaledFlag = pygame.transform.scale(flag, (1280, 720))
